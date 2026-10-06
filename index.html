@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Career Architect</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <span class="logo-badge">FC 27</span>
+        <div>
+          <h1>Career Architect</h1>
+          <p>Storylines for your FC 27 Career Mode save</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <p class="intro">Pick a league and get a random club with a story to play out.</p>
+
+      <form class="controls" onsubmit="return false">
+        <label>
+          League
+          <select id="league"></select>
+        </label>
+        <label>
+          Difficulty
+          <select id="difficulty">
+            <option value="0">Casual</option>
+            <option value="1">Standard</option>
+            <option value="2">Hardcore</option>
+          </select>
+        </label>
+        <label>
+          Save length
+          <select id="seasons">
+            <option value="1">1 season</option>
+            <option value="3">3 seasons</option>
+            <option value="5">5 seasons</option>
+          </select>
+        </label>
+      </form>
+
+      <div class="actions">
+        <button id="generate" class="primary" type="button">New team &amp; story</button>
+        <button id="new-story" type="button">Same team, new story</button>
+        <button id="copy-text" type="button">Copy story</button>
+        <button id="copy-link" type="button">Copy link</button>
+      </div>
+
+      <article id="story" class="story" aria-live="polite"></article>
+    </main>
+
+    <footer class="site-footer">
+      Fan-made, not affiliated with or endorsed by EA SPORTS. EA SPORTS FC is a trademark of Electronic Arts Inc.
+    </footer>
+
+    <script src="js/leagues.js"></script>
+    <script src="js/stories.js"></script>
+    <script src="js/generator.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
